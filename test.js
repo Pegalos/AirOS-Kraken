@@ -3,6 +3,6 @@ window.bmTestCommand = function(args) {
     if (args[0] === 'test') {
         return `bm:test [${timestamp}] hello world`;
     } else {
-        return `bm:test [${timestamp}] Unknown command. Usage: bm test`;
+        return;
     }
 };
