@@ -1,8 +1,14 @@
-window.bmTestCommand = function(args) {
+function handleTestCommand(args) {
     const timestamp = new Date().toISOString().replace('T', ' ').split('.')[0];
-    if (args[0] === 'test') {
+    const cmdArgs = args.slice(1);
+
+    const firstArg = cmdArgs[0];
+
+    if (firstArg === "test") {
         return `bm:test [${timestamp}] hello world`;
     } else {
-        return;
+        return `bm:test [${timestamp}] Unknown command. Usage: bm test`;
     }
-};
+}
+
+return handleTestCommand(args);
